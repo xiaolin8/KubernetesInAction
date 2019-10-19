@@ -1,0 +1,14 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: iting-cronjob
+spec:
+  schedule: "* */1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: iting-cronjob
+              image: xiaolin8/iting_signin
+          restartPolicy: OnFailure
