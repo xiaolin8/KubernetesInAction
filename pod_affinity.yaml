@@ -5,7 +5,7 @@ metadata:
 spec:
   sessionAffinity: ClientIP
   ports:
-    - port: 80
-      targetPort: 8080
-    selector:
-      app: kubia
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: kubia
